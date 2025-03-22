@@ -15,7 +15,7 @@ import java.util.Optional;
 // нужно добавить в контекст приложения
 @Service
 public class PostService {
-    InMemoryPostStorage inMemoryPostStorage = new InMemoryPostStorage();
+    private final InMemoryPostStorage inMemoryPostStorage = new InMemoryPostStorage();
 
     public Collection<Post> findAll(int from, int size, SortOrder sortOrder) {
         return inMemoryPostStorage.findAll(from, size, sortOrder);
@@ -38,7 +38,7 @@ public class PostService {
         throw new NotFoundException("Пост с id = " + newPost.getId() + " не найден");
     }
 
-    public Optional<Post> findById(@PathVariable long postId) {
+    public Optional<Post> findById(long postId) {
         return inMemoryPostStorage.findById(postId);
     }
 }

@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PathVariable;
 import ru.shalter.enums.SortOrder;
 import ru.shalter.exeption.ConditionsNotMetException;
-import ru.shalter.exeption.NotFoundException;
 import ru.shalter.model.Post;
 
 import java.time.Instant;
