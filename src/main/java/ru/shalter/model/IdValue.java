@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class IdValue {
+
     private Long id; // Используем Long, т.к. friendId - Long
 
     public IdValue(Long id) {
